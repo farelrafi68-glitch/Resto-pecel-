@@ -1,0 +1,106 @@
+/* ==================== CUSTOM STYLES & ANIMATIONS ==================== */
+
+/* Font Utama */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Kustomisasi Scrollbar UI Dark Mode */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(51, 65, 85, 0.8);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(245, 158, 11, 0.6);
+}
+
+/* State Navigasi Tab */
+.tab-button {
+    color: #94a3b8;
+}
+
+.tab-button:hover {
+    color: #f1f5f9;
+    background-color: rgba(51, 65, 85, 0.5);
+}
+
+.tab-button.active {
+    background-color: #f59e0b;
+    color: #020617;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+}
+
+/* State Filter Kategori */
+.category-btn.active {
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    border-color: rgba(245, 158, 11, 0.4);
+}
+
+/* State Tombol Tipe Pesanan (Dine-in / Takeaway) */
+.order-type-btn.active {
+    background-color: #f59e0b;
+    color: #020617;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+}
+
+/* Radio Kustomisasi Menu */
+.custom-radio:checked + .opt-box {
+    border-color: #f59e0b;
+    background-color: rgba(245, 158, 11, 0.15);
+    color: #fbbf24;
+    font-weight: 700;
+}
+
+/* Selection Metode Pembayaran */
+.payment-method-option input:checked + .pay-box {
+    border-color: #f59e0b;
+    background-color: rgba(245, 158, 11, 0.1);
+    color: #ffffff;
+}
+
+/* Animasi Pop Up Modal */
+@keyframes scaleUp {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-scaleUp {
+    animation: scaleUp 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Menyembunyikan Arrow Spinner pada Input Number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Helper Scrollbar Sembunyi */
+.scrollbar-none::-webkit-scrollbar {
+    display: none;
+}
+.scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
